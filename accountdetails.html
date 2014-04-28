@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="well">
+      <form class="form-horizontal" name="detailsForm" role="form">
+  
+        <div class="form-group" ng-class="{error: showdetailsvalidate && detailsForm.username.$invalid}">
+          <label for="Username" class="col-md-2 control-label">Username</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" readonly id="username" name="username" placeholder="" class="input-xlarge" ng-model="account.username" required>
+            <span ng-show="showdetailsvalidate && detailsForm.username.$error.required" class="help-inline">Required</span>
+          </div>
+        </div>
+        <div class="form-group" ng-class="{error: showdetailsvalidate && detailsForm.password.$invalid}">
+          <label for="Password" class="col-md-2 control-label">Password</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" id="password" name="password" placeholder="" class="input-xlarge" ng-model="account._password" required>
+            <span ng-show="showdetailsvalidate && detailsForm.password.$error.required" class="help-inline">Required</span>
+          </div>
+        </div>
+
+        <div class="form-group" ng-class="{error: showdetailsvalidate && detailsForm.fullname.$invalid}">
+          <label for="fullname" class="col-md-2 control-label">Full Name</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="" class="input-xlarge" ng-model="account.fullname" required>
+            <span ng-show="showdetailsvalidate && detailsForm.fullname.$error.required" class="help-inline">Required</span>
+          </div>
+        </div>
+
+        <div class="form-group" ng-class="{error: showdetailsvalidate && detailsForm.email.$invalid}">
+          <label for="email" class="col-md-2 control-label">Email</label>
+          <div class="col-md-8">
+            <input type="email" class="form-control" id="email" name="email" placeholder="" class="input-xlarge" ng-model="account.email" required>
+            <span ng-show="showdetailsvalidate && detailsForm.email.$error.required" class="help-inline">Email & Required</span>
+          </div>
+        </div>
+
+        
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-8">
+           <button class="btn btn-success" ng-click="detailssubmit();">Save</button>
+          </div>
+        </div>
+      </form>
+    
+    </div>
+
+  </div>
+</div>

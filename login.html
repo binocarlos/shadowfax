@@ -1,0 +1,25 @@
+<form class="form-horizontal" name="loginForm" role="form">
+
+  <div class="form-group" ng-class="{error: showloginvalidate && loginForm.username.$invalid}">
+    <label for="inputEmail1" class="col-md-2 control-label">Email</label>
+    <div class="col-md-8">
+      <input type="text" class="form-control" id="username" name="username" placeholder="Email" ng-model="login.username" required>
+    </div>
+  </div>
+  <div class="form-group" ng-class="{error: showloginvalidate && loginForm.password.$invalid}">
+    <label for="inputPassword1" class="col-md-2 control-label">Password</label>
+    <div class="col-md-8">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="login.password" required>
+    </div>
+  </div>
+
+
+  <div ng-show="loginmessage" class="help-inline" style="margin-bottom:10px;"><div class="label label-danger">{{ loginmessage }}</div></div>
+  <div ng-show="postregistermessage" class="help-inline" style="margin-bottom:10px;"><div class="label label-info">{{ postregistermessage }}</div></div>
+
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-8">
+      <button type="submit" class="btn btn-default" ng-click="loginSubmit();">Sign in</button>
+    </div>
+  </div>
+</form>

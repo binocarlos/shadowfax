@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    title Track Tube - Login
+    include ../includes/head
+    link(rel="stylesheet" href='/css/bootstrap.css')
+    link(rel="stylesheet" href='/css/tracktube.css')
+    link(rel="stylesheet" href='/css/social-buttons.css')
+    link(rel="stylesheet" href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css')
+body
+  #wrap
+    .container
+      include ./menu
+
+      |<div class="container" style="margin-top:20px;" ng-cloak ng-app="tracktube.login" ng-controller="LoginController">
+      |  <div class="row" ng-hide="connect_username">
+      |    <div class="col-md-6">
+      |      <div >
+      |        <login-form />
+      |      </div>
+      |    </div>
+      |    <div class="col-md-6">
+      |      <a target="_self" href="/auth/google" class="btn btn-google-plus"><i class="icon-google-plus"></i> | Connect with YouTube</a><br /><br />
+      |      <a target="_self" href="/auth/twitter" class="btn btn-twitter"><i class="icon-twitter"></i> | Connect with Twitter</a><br /><br />
+      |      <a target="_self" href="/auth/facebook" class="btn btn-facebook"><i class="icon-facebook"></i> | Connect with Facebook</a><br /><br />
+      |    </div>
+      |  </div>
+      |  <div class="row" ng-show="connect_username">
+      |    <div class="col-md-6">
+      
+      |      <h4>Claim your tracktube username</h4>
+      
+      |      <p>Type the name you want to use for tracktube - your profile will live under this name.</p>
+      
+      |      <p class="well">
+      |        http://thetracktube.com/{{ login.connect_username }}
+      |      </p>
+      
+      |      <form class="form-horizontal" name="loginForm" role="form">
+      
+      |        <div class="form-group">
+      |          <label for="username" class="col-md-2 control-label">Username</label>
+      |          <div class="col-md-8">
+      |            <input type="text" class="form-control" id="username" name="username" placeholder="Username" ng-model="login.connect_username" required>
+      |          </div>
+      |        </div>
+      
+      |        <div ng-show="updateusername_message" class="help-inline" style="margin-bottom:10px;"><div class="label label-info">{{ updateusername_message }}</div></div>
+      
+      |        <div class="form-group" ng-show="usernameok">
+      |          <div class="col-md-offset-2 col-md-8">
+      |            <button type="submit" class="btn btn-default" hm-tap="saveusername();">Update username</button>
+      |          </div>
+      |        </div>
+      |      </form>
+      
+      |    </div>
+      |  </div>
+      |</div>
+
+  include ../includes/footer
+  script(src="/js/jquery.min.js")
+  script(src="/js/bootstrap.min.js")
+  script(src="/js/angular.min.js")
+  script(src="/app/login/build/build.js")
+  script.
+    require('tracktube-login');

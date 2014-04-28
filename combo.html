@@ -1,0 +1,18 @@
+<div>
+  <ul class="nav nav-tabs" id="loginFormTab">
+    <li ng-class="{active:mode=='login'}"><a href="#" ng-click="setmode('login')">Login</a></li>
+    <li ng-hide="loginonly" ng-class="{active:mode=='register'}"><a href="#" ng-click="setmode('register')">Create Account</a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+
+    <div ng-class="{active:mode=='login', in:mode=='login', fade:mode!='login'}" class="tab-pane" id="login" style="margin-top:20px;">
+
+        <shadowfax-login success="success" endpoint="login_endpoint" providers="login_providers" />
+    </div>
+
+    <divng-class="{active:mode=='register', in:mode=='register', fade:mode!='register'}" class="tab-pane" id="register" style="margin-top:20px;">
+
+        <shadowfax-register success="success" endpoint="register_endpoint" />
+    </div>
+  </div>
+</div>

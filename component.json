@@ -1,0 +1,23 @@
+{
+  "name": "shadowfax",
+  "repo": "binocarlos/shadowfax",
+  "description": "Angular JS directive to display a login form using Bootstrap markup",
+  "version": "0.0.1",
+  "keywords": [
+    "bootstrap",
+    "login"
+  ],
+  "dependencies": {
+    
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "remotes":[
+    "https://raw.githubusercontent.com"
+  ]
+}
