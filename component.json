@@ -15,7 +15,11 @@
   "main": "index.js",
   "scripts": [
     "index.js",
-    "template.js"
+    "accountdetails.js",
+    "claim.js",
+    "combo.js",
+    "login.js",
+    "register.js"
   ],
   "remotes":[
     "https://raw.githubusercontent.com"
