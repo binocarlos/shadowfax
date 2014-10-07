@@ -1,0 +1,17 @@
+<body ng-app="MyApp" ng-controller="MyCtrl">
+<h3>Login</h3>
+
+<div>
+	<shadowfax-login 
+		success="login.success" 
+		endpoint="login.endpoint" />
+</div>
+
+<h3>Register</h3>
+<div>
+<shadowfax-register 
+	success="register.success" 
+	endpoint="register.endpoint" />
+</div>
+<script src="build/build.js"></script>
+</body>

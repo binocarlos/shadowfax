@@ -1,8 +1,5 @@
-templates:
-	@component convert combo.html
-	@component convert login.html
-	@component convert claim.html
-	@component convert register.html
-	@component convert accountdetails.html
+build:
+	mkdir -p build
+	browserify -t brfs test.js > build/build.js
 
-.PHONY: templates
+.PHONY: build

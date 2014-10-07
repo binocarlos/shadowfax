@@ -7,12 +7,12 @@
 
     <div ng-class="{active:mode=='login', in:mode=='login', fade:mode!='login'}" class="tab-pane" id="login" style="margin-top:20px;">
 
-        <shadowfax-login success="success" endpoint="login_endpoint" providers="login_providers" />
+        <shadowfax-login  />
     </div>
 
-    <divng-class="{active:mode=='register', in:mode=='register', fade:mode!='register'}" class="tab-pane" id="register" style="margin-top:20px;">
+    <div ng-class="{active:mode=='register', in:mode=='register', fade:mode!='register'}" class="tab-pane" id="register" style="margin-top:20px;">
 
-        <shadowfax-register success="success" endpoint="register_endpoint" />
+        <shadowfax-register />
     </div>
   </div>
 </div>

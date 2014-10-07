@@ -1,0 +1,32 @@
+{
+  "name": "shadowfax",
+  "version": "0.1.0",
+  "description": "angular login/register and general account related directives",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"do some tests\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binocarlos/shadowfax.git"
+  },
+  "keywords": [
+    "login",
+    "angular"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binocarlos/shadowfax/issues"
+  },
+  "homepage": "https://github.com/binocarlos/shadowfax",
+  "browserify": {
+    "transform": [ "brfs" ]
+  },
+  "dependencies": {
+    "angular-bsfy": "^1.2.23-1"
+  },
+  "devDependencies": {
+    "brfs": "^1.2.0"
+  }
+}
