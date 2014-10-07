@@ -16,7 +16,6 @@ module.exports = angular
     
   ])
 
-
   .directive('shadowfaxUserForm', function(){
 
     return {
