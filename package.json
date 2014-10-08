@@ -1,6 +1,6 @@
 {
   "name": "shadowfax",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "angular login/register and general account related directives",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/binocarlos/shadowfax",
   "browserify": {
-    "transform": [ "brfs" ]
+    "transform": [
+      "brfs"
+    ]
   },
   "dependencies": {
     "angular-bsfy": "^1.2.23-1"
