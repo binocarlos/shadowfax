@@ -8,7 +8,7 @@ angular login/register form directives - works well with [gandalf](https://githu
 Install the module to your project:
 
 ```
-$ npm install binocarlos/shadowfax --save
+$ npm install shadowfax --save
 ```
 
 Include it in your app.js:
